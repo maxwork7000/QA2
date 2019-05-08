@@ -30,9 +30,10 @@ Verify that the length of database columns are as per the data model design spec
 Example: Data Model specification for the 'first_name' column is of length 100 but the corresponding database table column is only 80 characters long.
 Index/Constraint Check
 Verify that proper constraints and indexes are defined on the database tables as per the design specifications.
+GGGGGGGGGGGGGGG
    Verify that the columns that cannot be null have the 'NOT NULL' constraint. 
    Verify that the unique key and foreign key columns are indexed as per the requirement. 
-   Verify that the table was named according to the table naming convention. 
+   Verify that the table was named according to the black black black table naming convention. 
 
 Example 1: A column was defined as 'NOT NULL' but it can be optional as per the design.
 Example 2: Foreign key constraints were not defined on the database table resulting in orphan records in the child table.
