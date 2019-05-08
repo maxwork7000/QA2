@@ -1,1 +1,55 @@
-Hello World! Hello Polina. Hello Tatiana Hello Max
+What is ETL Testing?
+ETL is commonly associated with Data Warehousing projects but there in reality any form of bulk data movement from a source to a target can be considered ETL. Large enterprises often have a need to move application data from one source to another for data integration or data migration purposes. ETL testing is a data centric testing process to validate that the data has been tranformed and loaded into the target as expected.
+
+Challenges in ETL Testing
+ETL Testing is different from application testing because it requires a data centric testing approach. Some of the challenges in ETL Testing are: 
+   - ETL Testing involves comparing of large volumes of data typically millions of records.
+   - The data that needs to be tested is in heterogeneous data sources (eg. databases, flat files).
+   - Data is often transformed which might require complex SQL queries for comparing the data.
+   - ETL testing is very much dependent on the availability of test data with different test scenarios.
+
+Although there are slight variations in the type of tests that need to be executed for each project, below are the most common types of tests that need to be done for ETL Testing.
+ 
+ETL Testing Categories
+•	 Metadata Testing
+•	 Data Completeness Testing
+•	 Data Quality Testing
+•	 Data Transformation Testing
+•	 ETL Regression Testing
+•	 Reference Data Testing
+•	 Incremental ETL Testing
+•	 ETL Integration Testing
+•	 ETL Performance Testing
+METADATA TESTING
+The purpose of Metadata Testing is to verify that the table definitions conform to the data model and application design specifications.
+Data Type Check
+Verify that the table and column data type definitions are as per the data model design specifications.
+Example: Data Model column data type is NUMBER but the database column data type is STRING (or VARCHAR).
+Data Length Check
+Verify that the length of database columns are as per the data model design specifications. 
+Example: Data Model specification for the 'first_name' column is of length 100 but the corresponding database table column is only 80 characters long.
+Index/Constraint Check
+Verify that proper constraints and indexes are defined on the database tables as per the design specifications.
+   Verify that the columns that cannot be null have the 'NOT NULL' constraint. 
+   Verify that the unique key and foreign key columns are indexed as per the requirement. 
+   Verify that the table was named according to the table naming convention. 
+
+Example 1: A column was defined as 'NOT NULL' but it can be optional as per the design.
+Example 2: Foreign key constraints were not defined on the database table resulting in orphan records in the child table.
+Metadata Naming Standards Check
+Verify that the names of the database metadata such as tables, columns, indexes are as per the naming standards. 
+Example: The naming standard for Fact tables is to end with an '_F' but some of the fact tables names end with '_FACT'.
+Metadata Check Across Environments
+Compare table and column metadata across environments to ensure that changes have been migrated appropriately.
+Example: A new column added to the SALES fact table was not migrated from the Development to the Test environment resulting in ETL failures.
+Automate metadata testing with ETL Validator
+
+
+ETL Validator comes with Metadata Compare Wizard for automatically capturing and comparing Table Metadata.
+   Track changes to Table metadata over a period of time. This helps ensure that the QA and development teams are aware of the changes to table metadata in both Source and Target systems.
+   Compare table metadata across environments to ensure that metadata changes have been migrated properly to the test and production environments.
+   Compare column data types between source and target environments.
+   Validate Reference data between spreadsheet and database or across environments.
+Automate ETL Testing using ETL Validator
+https://youtu.be/v5OdKf0wf-E?list=PLq-Q4hhL4wuBFR-Gbs67QBJe5uef4jbpm
+
